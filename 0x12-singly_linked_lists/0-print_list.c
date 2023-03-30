@@ -1,24 +1,24 @@
-#include "lists.h"
+#include "list.h"
 
 /**
- * print_list - prints list.
- * @h: param list
- * Return: struct
+ * print_list - prints all the elements of a list_t list
+ * @h: pointer to the first element of the linked list
+ * Return: size of linked link in size_t type
  */
-
 size_t print_list(const list_t *h)
 {
-	size_t l_node;
+	int i = 0;
 
-	l_node = 0;
-	while (h != NULL)
+	while (h)
 	{
 		if (h->str == NULL)
-			printf("[%d] %s\n", 0, "(nil)");
+			printf("[0] (nil)\n");
 		else
 			printf("[%d] %s\n", h->len, h->str);
+
+		i++;
 		h = h->next;
-		l_node++;
 	}
-	return (l_node);
+
+	return (i);
 }
