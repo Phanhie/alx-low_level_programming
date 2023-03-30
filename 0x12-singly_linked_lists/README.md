@@ -1,2 +1,2 @@
 0x12-singly_linked_lists
-Algorithm Data structure
+C-Algorithm Data structure
